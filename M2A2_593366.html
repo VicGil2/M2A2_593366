@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro para un Torneo de Videojuegos 蘼蘿蘽</title>
+
+    </head>
+
+    <body>
+        <h1>Registro para un Torneo de Videojuegos</h1>
+
+        <form action="" method="POST">
+            <table cellpadding="5" border="1">
+                <tr>
+                    <!--Nombre-->
+                    <td>Nombre del jugador</td>
+                    <td><input type="text" placeholder="Escribe tu nombre" name="nombre" required minlength="3" maxlength="15"></td>
+                </tr>
+
+                <tr>
+                    <!--Correo-->
+                    <td>Correo</td>
+                    <td><input type="email" placeholder="ejemplo@correo.com" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <!--Edad-->
+                    <td>Edad</td>
+                    <td><input type="number" placeholder="Escribe tu edad" name="edad" required min="12" max="40"></td>
+                </tr>
+
+                <tr>
+                    <!--Gamertag-->
+                    <td>Gamertag</td>
+                    <td><input 
+                        type="text" 
+                        id="gamertag"
+                        placeholder="Escribe tu gamertag" name="gamertag"
+                        pattern="[A-Za-z0-9]+"></td>
+                </tr>
+
+                <tr>    
+                    <!--Categoria-->
+                    <td>Categoría</td>
+                    <td><input type="radio" id="principiante" name="categoria" value="Principiante" required>
+                   <label for="principiante">Principiante</label>
+                
+                <input type="radio" id="Intermedio" name="categoria" value="Intermedio">
+                   <label for="Intermedio">Intermedio</label>
+                
+                <input type="radio" id="avanzado" name="categoria" value="Avanzado">
+                   <label for="avanzado">Avanzado</label> </td>
+                    
+                    
+                </tr>
+
+                <tr>
+                    <!--Juegos favoritos-->
+                    <td>Juegos favoritos</td>
+                    <td><input type="checkbox" id="r6" name="juegos[]" value="R6">
+                   <label for="r6">R6</label>
+
+                   <input type="checkbox" id="FIFA" name="juegos[]" value="FIFA">
+                   <label for="FIFA">FIFA</label>
+
+                   <input type="checkbox" id="MLB: The show" name="juegos[]" value="MLB: The show">
+                   <label for="MLB: The show">MLB: The show</label>
+                </tr>
+
+                <tr>
+                    <!--Fecha de inscripción-->
+                    <td>Fecha de inscripción</td>
+                    <td><input type="date" name="fecha_inscripcion" 
+                    id="fecha"
+                    min="2026-01-01"
+                    max="2026-12-31"
+                    required></td>
+                </tr>
+
+                <tr>
+                    <!--Botones-->
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Restablecer">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
